@@ -114,6 +114,4 @@ path, and the edge parser rejects malformed input.
 - Save / load custom graphs as JSON
 - Side-by-side race mode for graph algorithms
 
-## License
 
-MIT - see [LICENSE](LICENSE).
