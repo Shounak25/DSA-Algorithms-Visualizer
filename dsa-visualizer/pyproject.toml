@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsa-visualizer"
+version = "1.0.0"
+description = "Interactive, step-by-step visualizer for tree, graph and sorting algorithms (Tkinter)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["algorithms", "data-structures", "visualization", "tkinter", "education"]
+
+[project.optional-dependencies]
+gif = ["pillow>=10.0"]
+dev = ["pytest>=7.4", "black>=24.0", "isort>=5.13", "pyflakes>=3.2"]
+
+[project.scripts]
+dsa-visualizer = "dsa_visualizer.app:main"
+
+[tool.setuptools.packages.find]
+include = ["dsa_visualizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
